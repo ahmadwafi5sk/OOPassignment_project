@@ -1,0 +1,337 @@
+/* Set default values for all elements in the HTML document */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+/* Define custom CSS variables using :root pseudo-class */
+:root{
+    --bg-color: #fff;
+    --text-color: #221314;
+    --second-color: #5a7184;
+    --main-color: #6e54fa;
+    --big-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+}
+
+/* Define styles for the entire body of the HTML document */
+body{
+    background: var(--bg-color);  /* Use the custom background color */
+    color: var(--text-color);    /* Use the custom text color */
+}
+
+/* Define styles for the header element */
+header{
+    position: fixed;            /* Set the header to a fixed position */
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;              /* Set the stacking order of the header */
+    display: flex;              /* Use flexbox layout for the header */
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 18%;
+    transition: ease .40s;      /* Add a transition effect */
+}
+
+/* Define styles for the logo */
+.logo{
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--bg-color);
+}
+
+/* Define styles for the navbar */
+.navbar{
+    display: flex;
+}
+
+/* Define styles for the links in the navbar */
+.navbar a{
+    color: var(--bg-color);
+    font-size: var(--p-font);   /* Use the custom font size */
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 4px;
+    transition: ease .40s;      /* Add a transition effect */
+}
+
+/* Define styles for the links in the navbar when hovered over */
+.navbar a:hover{
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);   /* Add a box shadow effect */
+    border-radius: 4px;
+}
+
+/* Define styles for the menu icon */
+#menu-icon{
+    color: var(--bg-color);
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+/* Define styles for each section of the HTML document */
+section{
+    padding: 80px 18%;
+}
+
+/* Define styles for the home section */
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(backimage1.jpeg) no-repeat center center fixed;  /* Use a background image */
+    background-size: cover;
+    background-position: center;
+    display: grid;              /* Use grid layout for the home section */
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+.home-text h1{
+    font-size: 60px;  /* Sets the font size of the header to 60 pixels */
+    line-height: 1.2;  /* Sets the line height to 1.2 */
+    color: var(--bg-color);  /* Sets the color of the text to a variable named --bg-color */
+    font-family: 'Paytone One', sans-serif;  /* Sets the font family to 'Paytone One' and sans-serif as a fallback */
+    letter-spacing: 4px;  /* Adds 4 pixels of letter spacing */
+    margin-bottom: 20px;  /* Adds a margin of 20 pixels at the bottom */
+}
+
+.home-text p{
+    color: #ffffffbf;  /* Sets the color of the text to a semi-transparent white */
+    font-size: 20px;  /* Sets the font size to 20 pixels */
+    font-weight: 400;  /* Sets the font weight to normal */
+    line-height: 38px;  /* Sets the line height to 38 pixels */
+    margin-bottom: 50px;  /* Adds a margin of 50 pixels at the bottom */
+}
+/* Style for home button */
+.home-btn{
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px 30px;
+    background: #ffffffbf; /* white background with 75% opacity */
+    color: var(--main-color); /* main color defined elsewhere in the stylesheet */
+    border-radius: 4px;
+    transition: ease .40s; /* transition effect with easing */
+}
+
+/* Style for when home button is hovered over */
+.home-btn:hover{
+    background: var(--bg-color); /* background color defined elsewhere in the stylesheet */
+    transform: scale(1.1); /* increase size by 10% on hover */
+}
+
+/* Style for sticky header */
+header.sticky{
+    background: var(--bg-color); /* background color defined elsewhere in the stylesheet */
+    padding: 10px 18%; /* top and bottom padding of 10px, left and right padding of 18% */
+    box-shadow: rgba(33,35,38, 0.1) 0px 10px 10px -10px; /* box shadow effect with opacity */
+}
+/* This CSS rule applies to the logo element inside an element with class "sticky" */
+.sticky .logo{
+    color: var(--text-color);
+}
+
+/* This CSS rule applies to all anchor elements inside an element with class "sticky navbar" */
+.sticky .navbar a{
+    color: var(--text-color);
+}
+
+/* This CSS rule applies to all h2 elements inside an element with class "text" */
+.text h2{
+    font-size: var(--h2-font); /* Sets the font size to a custom variable */
+    line-height: 1.1;
+}
+
+/* This CSS rule applies to an element with class "row-items" */
+.row-items{
+    display: grid; /* Sets the display property to grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto)); /* Sets the grid template columns to a responsive value */
+    grid-gap: 2rem; /* Sets the gap between grid items */
+    align-items: center; /* Centers the items vertically */
+    text-align: center; /* Centers the items horizontally */
+    margin-top: 5rem; /* Adds a margin to the top of the element */
+}
+
+/* This CSS rule applies to an element with class "container-box" */
+.container-box{
+    background: var(--bg-color); /* Sets the background color to a custom variable */
+    border: 1px solid #f0eded; /* Sets a border with a specific color */
+    padding: 50px 10px; /* Sets the padding around the element */
+    border-radius: 4px; /* Rounds the corners of the element */
+    transition: all 1s ease 0s; /* Applies a transition effect to all CSS properties with a 1s duration */
+    cursor: pointer; /* Changes the cursor when hovering over the element */
+}
+
+/* This CSS rule applies to an element with class "container-img" */
+.container-img img{
+    height: 85px; /* Sets the height of the image */
+    width: 85px; /* Sets the width of the image */
+    padding: 15px; /* Sets the padding around the image */
+    background: var(--bg-color); /* Sets the background color of the image to a custom variable */
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%); /* Adds a box shadow to the image */
+    border-radius: 4px; /* Rounds the corners of the image */
+    margin-bottom: 15px; /* Adds a margin to the bottom of the image */
+    cursor: pointer; /* Changes the cursor when hovering over the image */
+}
+
+/* This CSS rule applies to all h4 elements inside an element with class "container-box" */
+.container-box h4{
+    font-size: 24px; /* Sets the font size */
+    font-weight: 600; /* Sets the font weight */
+    margin-bottom: 8px; /* Adds a margin to the bottom of the element */
+}
+/* Styles for paragraph element inside container-box class */
+.container-box p{
+    font-size: 15px;
+    color: var(--second-color);
+}
+
+/* Styles for container-box class on hover state */
+.container-box:hover{
+    box-shadow: 5px 30px 56.1276px rgb(55 55 55 / 12%);
+    border: 1px solid transparent;
+    transform: translateY(-3px);
+}
+
+/* Styles for title class */
+.title{
+    text-align: center;
+}
+
+/* Styles for h2 element inside title class */
+.title h2{
+    font-size: var(--h2-font);
+    line-height: 1.2;
+}
+
+/* Styles for package-content class */
+.package-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+/* Styles for thum class */
+.thum{
+    position: relative;
+    transition: all .3s cubic-bezier(.445,.05,.55,.95);
+    will-change: filter;
+    cursor: pointer;
+}
+
+/* Styles for image element inside thum class */
+.thum img{
+    width: 100%;
+    height: auto;
+}
+
+/* Styles for h4 element inside location class */
+.location h4{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Styles for thum class on hover state */
+.thum:hover{
+    filter: brightness(100%) hue-rotate(45deg);
+    transform: scale(1.04);
+}
+
+/* Styles for text input element of type text */
+input[type="text"] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+}
+
+/* Styles for button element */
+button {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Styles for button element on hover state */
+button:hover {
+    background-color: #5a3ce3;
+}
+
+/* Styling for input button */
+.input-button {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+/* Styling for input button when hovered */
+.input-button:hover {
+    background-color: #5a3ce3;
+}
+
+/* Styling for table */
+table {
+    border-collapse: collapse;
+    width: 90%; /* set table width to 90% */
+    max-width: 1200px; /* set maximum table width to 1200px */
+    margin: 0 auto; /* center table horizontally */
+    background-color: #fff;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+  
+/* Styling for table header cells and data cells */
+th,td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #eee;
+}
+  
+/* Styling for table header cells */
+th {
+    background-color: #fafafa;
+    color: #444;
+    font-weight: bold;
+    font-size: 14px;
+}
+  
+/* Styling for table data cells */
+td {
+    font-size: 14px;
+    color: #666;
+}
+  
+/* Select every even numbered row (tr) in the table and set the background color to #f9f9f9 */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+    
+/* When the user hovers over any row (tr) in the table, set the background color to #f5f5f5 */
+tr:hover {
+    background-color: #f5f5f5;
+}
+
